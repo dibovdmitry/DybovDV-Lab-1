@@ -26,28 +26,6 @@
 - [x] Задача 4: Установить Docker Engine: добавить GPG-ключ, настроить репозиторий, установить engine.
 - [x] Задача 5: Запустить тестовый Docker-образ и обучиться базовым командам: ps, ps -a, images, rm.
 - [x] Задача 6: Запустить JupyterLab в Docker-контейнере и проверить доступ по http://127.0.0.1:9999.
-
-**Ключевые фрагменты кода**
-python
-import mlflow
-import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.datasets import make_regression
-from sklearn.metrics import mean_squared_error
-import matplotlib.pyplot as plt
-
-mlflow.set_experiment("mlops_lab_experiment")
-with mlflow.start_run():
-    X, y = make_regression(n_samples=100, n_features=1, noise=10.0, random_state=42)
-    model = LinearRegression().fit(X, y)
-    preds = model.predict(X)
-    mse = mean_squared_error(y, preds)
-    mlflow.log_metric("mse", mse)
-    mlflow.log_param("noise", 10.0)
-    plt.scatter(X, y)
-    plt.plot(X, preds, color="red")
-    plt.savefig("prediction_plot.png")
-    mlflow.log_artifact("prediction_plot.png")
     
 **Создание и активация окружения conda**
 conda create -n mlops-lab python=3.10 -y
