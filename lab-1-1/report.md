@@ -27,31 +27,31 @@
 - [x] Задача 5: Запустить тестовый Docker-образ и обучиться базовым командам: ps, ps -a, images, rm.
 - [x] Задача 6: Запустить JupyterLab в Docker-контейнере и проверить доступ по http://127.0.0.1:9999.
     
-**Создание и активация окружения conda**
+**Создание и активация окружения conda** /
 conda create -n mlops-lab python=3.10 -y
 conda activate mlops-lab
 
-**Установка зависимостей**
+**Установка зависимостей** /
 conda install pandas scikit-learn matplotlib jupyterlab -y
 pip install mlflow
 
-**Базовые docker-команды**
+**Базовые docker-команды** /
 sudo apt-get update
 
-**Добавить GPG ключ и репозиторий Docker (прим. команды)**
+**Добавить GPG ключ и репозиторий Docker (прим. команды)** /
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-**Установка Docker Engine**
+**Установка Docker Engine** /
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-**Добавить пользователя в группу docker**
+**Добавить пользователя в группу docker** /
 sudo usermod -aG docker $USER
 
-### **Запуск JupyterLab в контейнере (пример)**
+### **Запуск JupyterLab в контейнере (пример)** /
 docker run -p 9999:8888 jupyter/base-notebook
 
-### Результаты выполнения
+### Результаты выполнения /
 1. Пример работы программы / выводы команд
 Создано и активировано окружение mlops-lab.
 
