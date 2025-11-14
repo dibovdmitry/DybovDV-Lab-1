@@ -52,8 +52,8 @@ sudo usermod -aG docker $USER
 docker run -p 9999:8888 jupyter/base-notebook
 
 ##### Результаты выполнения
-1. Пример работы программы выводы команд
-Создано и активировано окружение mlops-lab.
+1. Создано и активировано окружение mlops-lab.
+![скриншот](screenshots/Screenshot1.png "Рисунок")
 
 2. Установлены пакеты pandas, scikit-learn, matplotlib, jupyterlab — импорт pandas прошёл успешно.
 
