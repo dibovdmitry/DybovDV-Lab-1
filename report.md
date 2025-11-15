@@ -10,7 +10,7 @@
 Студент: Дыбов Д.В. 
 
 #### Цель работы
-Освоение базовых принципов установки и настройки рабочего окружения для Data Science и MLOps на базе Anaconda (conda) и Docker; получение практических навыков управления виртуальными окружениями Python, работы с conda.
+Освоение базовых принципов установки и настройки рабочего окружения для Data Science и MLOps на базе Anaconda (conda) и Docker. Получение практических навыков управления виртуальными окружениями Python, работы с conda, логирования параметров, метрик и артефактов вычислительных экспериментов с использованием MLflow. Выполнение основных операций с Docker-контейнерами. 
 
 #### Теоретическая часть
 Краткие изученные концепции:
@@ -32,30 +32,6 @@
 
 ##### Ключевые фрагменты кода
 Скрипт mlflow_basic: \
-
-##### Создание и активация окружения conda
-conda create -n mlops-lab python=3.10 -y \
-conda activate mlops-lab
-
-##### Установка зависимостей
-conda install pandas scikit-learn matplotlib jupyterlab -y \
-pip install mlflow
-
-##### Базовые docker-команды
-sudo apt-get update
-
-##### Добавить GPG ключ и репозиторий Docker (прим. команды)
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o/etc/apt/keyrings/docker.asc
-
-##### Установка Docker Engine
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-
-##### Добавить пользователя в группу docker
-sudo usermod -aG docker $USER
-
-##### Запуск JupyterLab в контейнере (пример)
-docker run -p 9999:8888 jupyter/base-notebook
 
 ##### Результаты выполнения
 1. Создано и активировано окружение mlops-lab. \
