@@ -34,18 +34,18 @@
 Скрипт mlflow_basic: \
 
 ##### Создание и активация окружения conda
-conda create -n mlops-lab python=3.10 -y
+conda create -n mlops-lab python=3.10 -y \
 conda activate mlops-lab
 
 ##### Установка зависимостей
-conda install pandas scikit-learn matplotlib jupyterlab -y
+conda install pandas scikit-learn matplotlib jupyterlab -y \
 pip install mlflow
 
 ##### Базовые docker-команды
 sudo apt-get update
 
 ##### Добавить GPG ключ и репозиторий Docker (прим. команды)
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o/etc/apt/keyrings/docker.asc
 
 ##### Установка Docker Engine
 sudo apt-get update
