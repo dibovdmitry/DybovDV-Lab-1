@@ -31,6 +31,7 @@
 - [x] Задача 8: Создать и запустить скрипт mlflow_basic.py, проверить появление эксперимента, логирование метрик и артефактов, повторить запуски с разными параметрами.
 
 ##### Ключевые фрагменты кода
+```python
 Скрипт mlflow_basic:
 import mlflow
 import mlflow.sklearn
@@ -97,7 +98,7 @@ with mlflow.start_run():
     print(f"Recall: {recall:.4f}")
     print(f"F1 Score: {f1:.4f}")
     print("Run completed and logged to MLflow!")
-
+```
 ##### Результаты выполнения
 1. Создано и активировано окружение mlops-lab. \
 ![скриншот](report/Screenshot1.png "Рисунок") \
