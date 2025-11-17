@@ -31,8 +31,8 @@
 - [x] Задача 8: Создать и запустить скрипт mlflow_basic.py, проверить появление эксперимента, логирование метрик и артефактов, повторить запуски с разными параметрами.
 
 ##### Ключевые фрагменты кода
+- Скрипт mlflow_basic:
 ```python
-Скрипт mlflow_basic:
 import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_iris
